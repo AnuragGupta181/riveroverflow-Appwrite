@@ -2,7 +2,7 @@ import {db} from "../name";
 import createAnswerCollection from "./answer.collection";
 import createCommentCollection from "./comment.collection";
 import createQuestionCollection from "./question.collection";
-import createVoteCollection from "./question.collection";
+import createVoteCollection from "./vote.collection";
 import { databases } from "./config";
 
 export default async function getOrCreatedDB(){
@@ -23,7 +23,7 @@ export default async function getOrCreatedDB(){
             console.log("Collection created")
             console.log("Database connected")
         } catch (error) {
-            console.log ("Eror creating databases or collection")
+            console.log ("Error creating databases or collection",error)
         }
     }
     return databases
